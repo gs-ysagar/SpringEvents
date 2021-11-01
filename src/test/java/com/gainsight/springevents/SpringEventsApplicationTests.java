@@ -1,4 +1,4 @@
-package com.example.springevents;
+package com.gainsight.springevents;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

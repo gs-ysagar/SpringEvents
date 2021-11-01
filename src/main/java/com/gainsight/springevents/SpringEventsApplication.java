@@ -1,4 +1,4 @@
-package com.example.springevents;
+package com.gainsight.springevents;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
