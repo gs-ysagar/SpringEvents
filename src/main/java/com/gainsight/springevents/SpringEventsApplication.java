@@ -1,13 +1,18 @@
 package com.gainsight.springevents;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import com.gainsight.springevents.config.AppConfig;
+import com.gainsight.springevents.publishers.AmazonPrimePublisher;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-@SpringBootApplication
 public class SpringEventsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringEventsApplication.class, args);
+
+		ApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+		AmazonPrimePublisher bean = context.getBean("amazonPrimePublisher", AmazonPrimePublisher.class);
+		bean.broadcastTheFamilyMan(1);
+
 	}
 
 }
